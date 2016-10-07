@@ -1,0 +1,70 @@
+h1{
+	float: center;
+	/*text-align: center;*/
+	overflow-x:hidden;
+}
+
+#cabecera{
+	border: 10px solid black;
+	width: 100%;
+    max-width: 1300px; /*o bien, @media...*/
+    margin: 0px auto;
+	margin-bottom: 20px;
+}
+
+body{
+	overflow-x:hidden;
+	font-family: Calibri;	
+	background-image: url("https://s-media-cache-ak0.pinimg.com/564x/a9/13/56/a91356a5b8232ac444e66eccaa67e9a1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.imagen{
+	float: left;
+	width: 50%;
+	height: 50%;
+	border: 10px;
+	padding: 0 0 1px;
+}
+
+/*.imagen img{
+	float: left;
+	width: 70%;
+	height: 70%;
+	border: 10px;
+	margin-right: 20px;
+}*/
+
+
+#contenedor{
+	margin: 0 auto;
+	width: 900px;
+}
+
+/*img{
+	width: 280px;
+	height: 280px;
+}*/
+
+.botonComprar{
+	text-align: center;
+	border: none;
+	text-decoration: none;
+	border-radius: 12px;
+	margin-top: 5px;
+	margin-bottom: 20px;	
+}
+
+#suma{
+	color: #003cb3;
+	font-size: 150%;
+	text-align: right;
+}
+
+ /*
+@media (max-width: 1350px) {
+	#cabecera{
+		width: 800px;
+	}
+}*/
