@@ -10,6 +10,14 @@
 <header>
 	<center> <img id="cabecera" src="img/tuMascotaFeliz2.jpg" alt="mascota.png"> </center>
 </header>
+
+<!-- MENÚ -->
+<ul>
+	<li> <a class = "menu" href="tiendaAndrea.html"> INICIO </a> </li>
+	<li> <a class = "menu" href="tiendaAndreaOfertas.html"> OFERTAS </a> </li>
+	<li style="float:right"> <a class = "menu" href="#contact"> CONTACTA </a> </li>
+</ul>
+
 <div id="contenedor">
 <section id="s1">
 	<article class="imagen">
