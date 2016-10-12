@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<meta charset ="utf-8">
+	<title> Tienda ANIMALES Andrea</title>
+	<script language="javascript" src="funciones.js"></script>
+	<link rel="stylesheet" href="estilos.css" type="text/css"/>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="tiendaAndreajs.js"></script>
+	
+	
+</head>
+<body>
+<header>
+	<center> <img id="cabecera" src="img/tuMascotaFeliz2.jpg" alt="mascota.png"> </center>
+</header>
+
+<!-- MENÚ -->
+<ul>
+	<li> <a class = "menu" href="tiendaAndrea.html"> INICIO </a> </li>
+	<li> <a class = "menu" href="tiendaAndreaOfertas.html"> OFERTAS </a> </li>
+	<li style="float:right"> <a class = "menu" href="#contact"> CONTACTA </a> </li>
+</ul>
+
+<div id="contenedor">
+<section id="s1">
+	<article class="imagen">
+		<img src="http://media.mediazs.com/bilder/set/completo/de/agility/fun/sport/4/400/23801_23800_23799_23798_sparset_fun_sport_agility_4.jpg">
+		<div class = "botonComprar">
+			<span> Precio: 89.99€ </span>	
+			<input type="button" value="Comprar" onclick="Comprar('Set completo de Agility Fun & Sport', 89.99);"> 
+		</div><!--comillas simples puesto que hay unas dobles!!!!!-->
+	</article>
+	<article class="imagen">
+		<img src="http://media.mediazs.com/bilder/kong/wobbler/juguete/interactivo/para/perros/8/400/180117_kong_wobbler_snackball_hund_04_2012_8.jpg">
+		<div class = "botonComprar"> 
+			<span> Precio: 13.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('KONG Wobbler juguete interactivo para perros', 13.99);"> 
+		</div>
+	</article>	
+	<article class="imagen">
+		<img src="img/gosPilota.png">
+		<div class = "botonComprar"> 
+			<span> Precio: 4.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('Pelota de tenis y de goma 2 en 1 para perros', 4.99);"> 
+		</div>
+	</article>
+	<article class="imagen">
+		<img src="http://media.mediazs.com/bilder/piscina/con/cubierta/para/perros/7/400/60405_dog_pool_mit_hund_03_7.jpg">
+		<div class = "botonComprar"> 
+			<span> Precio: 34.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('Piscina con cubierta para perros', 34.99);"> 
+		</div>
+	</article>
+	<article class="imagen">
+		<img src="img/kongVermell.png">
+		<div class = "botonComprar"> 
+			<span> Precio: 4.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('KONG Classic rojo juguete rellenable para perros', 4.99);"> 
+		</div>
+	</article>
+	<article class="imagen">
+		<img src="img/kongVermell2.png">
+		<div class = "botonComprar"> 
+			<span> Precio: 8.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('KONG Classic Flyer frisbee para perros', 8.99);"> 
+		</div>
+	</article>	
+	<article class="imagen">
+		<img src="http://media.mediazs.com/bilder/cesta/para/bicicleta/friends/on/tour/de/luxe/5/400/51518_PLA_Trixie_Fahrradkorb_Friends_on_Tour_de_Luxe_L_41_x_B_26_x_H_26_cm_5.jpg">
+		<div class = "botonComprar">
+			<span> Precio: 39.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('Cesta para bicicleta Friends on Tour de Luxe', 39.99);"> 
+		</div>
+	</article>
+	<article class="imagen">
+		<img src="img/pilota.png">
+		<div class = "botonComprar"> 
+			<span> Precio: 9.99€ </span>
+			<input type="button" value="Comprar" onclick="Comprar('Lanzador de pelotas Chuckit! Sport para perros', 9.99);"> 
+		</div>
+	</article>
+</section>
+</div>
+<aside id="total">
+	<p id="suma"> <b> Total </b> </p>
+</aside>
+<br> <br>
+</body>
+</HTML>
