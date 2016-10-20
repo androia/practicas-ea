@@ -1,0 +1,78 @@
+doctype html
+html
+    body
+    head
+        meta(charset='utf-8')
+        title  Tienda ANIMALES Andrea
+        script(language='javascript', src='funciones.js')
+        link(rel='stylesheet', href='public/styles.css', type='text/css')
+        link(rel='stylesheet', href='public/styleCarousel.css', type='text/css')
+        link(rel='icon', type='image/vnd.microsoft.icon', href='public/img/favicon1.ico')
+        script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+        script(src='client.js')
+        // Latest compiled and minified CSS
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        // jQuery library
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+        // Latest compiled JavaScript
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+        script(src='public/jsA.js')
+    body
+        header
+            center
+                img#cabecera(src='public/img/tuMascotaFeliz3.png', alt='mascota.png')
+        // MENÚ
+        ul
+            li
+                a.menu(href='tiendaAndrea.html')  INICIO
+            li
+                a.menu(href='tiendaAndreaOfertas.html')  PERROS
+            li
+                a.menu(href='tiendaAndreaOfertas.html')  GATOS
+            li
+                a.menu(href='tiendaAndreaOfertas.html')  OTROS
+            li(style='float:right')
+                a.menu(href='#contact')  CONTACTA
+
+        #carousel
+            #slides
+                ul
+                    li.slide
+                        .quoteContainer
+                            p.quote-phrase
+                                span.quote-marks "
+                                |   El perro, posee belleza sin vanidad, fuerza sin insolencia, valentía sin ferocidad, y todas las virtudes del hombre y ninguno de sus vicios.
+                                span.quote-marks "
+                        .authorContainer
+                            p.quote-author Lord Byron
+                    li.slide
+                        .quoteContainer
+                            p.quote-phrase
+                                span.quote-marks "
+                                |  Una vida sin perro es un error.
+                                span.quote-marks "
+                        .authorContainer
+                            p.quote-author Carl Zuckmayer
+                    li.slide
+                        .quoteContainer
+                            p.quote-phrase
+                                span.quote-marks "
+                                | Un perro es la única cosa en la Tierra que te amará más de lo que tú te amas a ti mismo
+                                span.quote-marks "
+                        .authorContainer
+                            p.quote-author Josh Billings
+                    li.slide
+                        .quoteContainer
+                            p.quote-phrase
+                                span.quote-marks "
+                                | El amor por los animales eleva el nivel cultural del pueblo
+                                span.quote-marks "
+                        .authorContainer
+                            p.quote-author Fermín Salvochea
+                    .btn-bar
+                        #buttons
+                            a#prev(href='#') <
+                            a#next(href='#') >
+        div
+            block content

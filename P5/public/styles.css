@@ -1,0 +1,127 @@
+h1{
+    float: center;
+    /*text-align: center;*/
+    overflow-x:hidden;
+}
+
+#cabecera{
+    border: 10px solid black;
+    width: 100%;
+    max-width: 1300px; /*o bien, @media...*/
+    margin: 0px auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+body{
+    overflow-x:hidden;
+    font-family: Calibri;
+    background-image: url("https://s-media-cache-ak0.pinimg.com/564x/a9/13/56/a91356a5b8232ac444e66eccaa67e9a1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.imagen{
+    float: left;
+    width: 50%;
+    height: 50%;
+    border: 10px;
+    padding: 0 0 1px;
+}*/
+
+/*.imagen img{
+	float: left;
+	width: 70%;
+	height: 70%;
+	border: 10px;
+	margin-right: 20px;
+}*/
+
+
+#contenedor{
+    margin: 0 auto;
+    width: 900px;
+}
+
+/*img{
+	width: 280px;
+	height: 280px;
+}*/
+
+.botonComprar{
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#suma{
+    color: #003cb3;
+    font-size: 150%;
+    text-align: right;
+}
+
+/*
+@media (max-width: 1350px) {
+   #cabecera{
+       width: 800px;
+   }
+}*/
+
+.menu{
+    text-decoration: none;
+    position: relative;
+    font-family: Calibri;
+    margin: 0px 40px;
+}
+
+ul {
+    border-radius: 6px;
+    list-style-type: none;
+    margin: 0 0.5%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #248DF5;
+}
+
+
+/*.product-box{
+    text-align: center;
+    padding:20px;
+    height: 290px;
+    transition: background 0.5s ease-in;
+    border-radius:10px;
+}
+
+.product-box.selected{
+    background-color: #EEE;
+}*/
+
+.footer {
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    margin-top:40px;
+    padding:20px;
+    background-color: #f5f5f5;
+}
