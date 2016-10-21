@@ -2,22 +2,20 @@ extends base
 include mixins/picture
 
 block content
-    #contenedor
-        section#s1
-            div.container
-                div.row
-                    div.col-sm-3
-                        - for (var i = 0; i < 3; ++i) {
-                            +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
-                        - }
-                    div.col-sm-3.col-md-offset-1
-                         - for (var i = 3; i < 6; ++i) {
-                            +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
-                         - }
-                    div.col-sm-3.col-md-offset-1
-                         - for (var i = 6; i < 9; ++i) {
-                            +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
-                         - }
+    div.container
+        div.row
+            div.col-sm-3
+                - for (var i = 0; i < 3; ++i) {
+                    +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
+                - }
+            div.col-sm-3.col-md-offset-1
+                 - for (var i = 3; i < 6; ++i) {
+                    +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
+                 - }
+            div.col-sm-3.col-md-offset-1
+                 - for (var i = 6; i < 9; ++i) {
+                    +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
+                 - }
 
 
 //block content
