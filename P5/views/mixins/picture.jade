@@ -1,5 +1,9 @@
-mixin picture(sourceImage, title)
+mixin picture(sourceImage, name, title, color, age)
     img(src=sourceImage, width="300", height="180").img-rounded
     center
-        h4 Raza:
-            b #{color}
+        h3
+            b
+                u #{name}
+            |   - #{age} anys
+        h4
+            b #{title} (#{color})
