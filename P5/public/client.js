@@ -4,7 +4,7 @@ $(document).ready(function(){
         $(this).parent().addClass("selected");
     });
     $('.img-rounded').mouseout(function() {
-        $(this).animate({opacity:'100'});
+        $(this).animate({opacity:'1'});
         $(this).parent().removeClass("selected");
     });
 });
