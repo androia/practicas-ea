@@ -6,16 +6,16 @@ block content
         div.row
             div.col-sm-3
                 - for (var i = 0; i < 3; ++i) {
-                    +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
+                +picture(pics[i].image, pics[i].name, pics[i].title, pics[i].color, pics[i].age)
                 - }
             div.col-sm-3.col-md-offset-1
-                 - for (var i = 3; i < 6; ++i) {
-                    +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
-                 - }
+                - for (var i = 3; i < 6; ++i) {
+                +picture(pics[i].image, pics[i].name, pics[i].title, pics[i].color, pics[i].age)
+                - }
             div.col-sm-3.col-md-offset-1
-                 - for (var i = 6; i < 9; ++i) {
-                    +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
-                 - }
+                - for (var i = 6; i < 9; ++i) {
+                +picture(pics[i].image, pics[i].name, pics[i].title, pics[i].color, pics[i].age)
+                - }
 
 
 //block content
@@ -26,7 +26,6 @@ block content
         - for (var i = 0; i < 9; ++i) {
             +picture(pics[i].image, pics[i].getPrice())
         - }
-
     // div.col-sm-4
          - for (var i = 3; i < 6; ++i) {
          +picture(pics[i].image, pics[i].color, pics[i].title, pics[i].price)
