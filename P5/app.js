@@ -26,16 +26,16 @@ api500px.photos.getPopular({'sort': 'created_at', 'rpp': '10','image_size':200},
     });
 });*/
 
-var pics = [
-    new Item("public/img/aHe45yi.jpg", "Pastor Alemany", "MARRÓ", "Andorra"),
-    new Item("public/img/gato-y-fondo-negro-1807.jpg", "Manx", "NEGRE", "Girona"),
-    new Item("public/img/644189_angliyskiy-buldog_buldog_sobaka_chrnyiy-fon_5223x3482_www.Gde-Fon.com.jpg", "BullDog", "MARRÓ", "Estimem", "Abrera"),
-    new Item("public/img/298995-alexfas01.jpg", "Golden Retriever", "MARRÓ", "Cuidem"),
-    new Item("public/img/Cats_Black_background_498711.jpg", "Siberiano", "MARRÓ", "Estimem"),
-    new Item("public/img/dog_puppy_black_baby_1174_1920x1080.jpg", "Labrador", "NEGRE", "Cuidem"),
-    new Item("public/img/eyes-black-dogs-funny-monochrome-black-background-200896.jpg", "Weimaraner", "GRIS", "Estimem"),
-    new Item("public/img/Black-cat-green-eyes-black-background_2560x1440.jpg", "Chartreux", "GRIS", "Cuidem"),
-    new Item("public/img/fon-chernyy-schenok-drug-sobaka.jpg", "Bòxer", "MARRÓ", "Un somriure")
+var pics = [ //imagen, raza, color
+    new Item("public/img/aHe45yi.jpg", "Pastor Alemany", "MARRÓ"),
+    new Item("public/img/gato-y-fondo-negro-1807.jpg", "Manx", "NEGRE"),
+    new Item("public/img/644189_angliyskiy-buldog_buldog_sobaka_chrnyiy-fon_5223x3482_www.Gde-Fon.com.jpg", "BullDog", "MARRÓ", "Estimem"),
+    new Item("public/img/298995-alexfas01.jpg", "Golden Retriever", "MARRÓ"),
+    new Item("public/img/Cats_Black_background_498711.jpg", "Siberiano", "MARRÓ"),
+    new Item("public/img/dog_puppy_black_baby_1174_1920x1080.jpg", "Labrador", "NEGRE"),
+    new Item("public/img/eyes-black-dogs-funny-monochrome-black-background-200896.jpg", "Weimaraner", "GRIS"),
+    new Item("public/img/Black-cat-green-eyes-black-background_2560x1440.jpg", "Chartreux", "GRIS"),
+    new Item("public/img/fon-chernyy-schenok-drug-sobaka.jpg", "Bòxer", "MARRÓ")
 ];
 
 // Render frontpage
