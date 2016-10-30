@@ -1,8 +1,26 @@
-#myCanvas {
-	width: 600px;
-	height: 400px;
+#game {    
+	background-image: url("mesaPingPong2.png");
+	background-size: 600px 400px;
+    background-repeat: no-repeat;
 }
 
-#demo{
-	margin-left: 270px;
+#equipos{
+	width: 600px;
+	height: 20px;
+	background-color: black;
+}
+#equipo1{
+	margin-left: 125px;
+	font-family: Calibri;
+	color: red;
+	/*background-image: url("escudoStPauli.jpg");
+	background-size: 20px 20px;
+	background-position: 20px 0px;
+    background-repeat: no-repeat;*/
+}
+
+#equipo2{
+	margin-left: 255px;
+	font-family: Calibri;
+	color: red;
 }
