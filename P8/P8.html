@@ -1,0 +1,157 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+    <title>Phaser - Making your first game</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+//Variables
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var player;
+var platforms;
+var cursors;
+var stars;
+var score = 0;
+var scoreText;
+
+//Funció que carrega les imatges
+function preload() {
+    game.load.image('sky', 'assets/sky.png');
+    game.load.image('ground', 'assets/platform.png');
+    game.load.image('star', 'assets/star.png');
+    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+}
+
+function create() {
+    //Per utilitzar physics, habilitem l'Arcade Physics system
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    //Fons amb l'imatge 'sky' de fons, des de les posicions 0,0.
+    game.add.sprite(0, 0, 'sky');
+
+    //El grup 'platforms' conté el terra i els 2 vores.
+    platforms = game.add.group();
+
+    //Habilitem physics per qualsevol objecte creat en aquest grup.
+    platforms.enableBody = true;
+
+    //Creació del terra.
+    var ground = platforms.create(0, game.world.height - 64, 'ground');
+
+    //Escalem per cabre dins el joc.
+    ground.scale.setTo(2, 2);
+
+    //Per no sortir-se quan salta el jugador.
+    ground.body.immovable = true;
+
+    //Creació de 2 vores.
+    var ledge = platforms.create(400, 400, 'ground');
+    ledge.body.immovable = true;
+
+    ledge = platforms.create(-150, 250, 'ground');
+    ledge.body.immovable = true;
+
+    //El jugador i la seva configuració.
+    player = game.add.sprite(32, game.world.height - 150, 'dude');
+
+    //Habilitem physics al jugador.
+    game.physics.arcade.enable(player);
+
+    //Propietats fisiques del jugador.
+    player.body.bounce.y = 0.2;
+    player.body.gravity.y = 300;
+    player.body.collideWorldBounds = true;
+
+    //Les 2 animacions: caminar cap a la dreta i l'esquerra.
+    player.animations.add('left', [0, 1, 2, 3], 10, true);
+    player.animations.add('right', [5, 6, 7, 8], 10, true);
+
+    //Agrupem les estrelles.
+    stars = game.add.group();
+
+    //Habilitem physics per les estrelles.
+    stars.enableBody = true;
+
+    //Creació de 12 estrelles.
+    for (var i = 0; i < 12; i++)
+    {
+        //Creació de l'estrella dins del grup 'stars'.
+        var star = stars.create(i * 70, 0, 'star');
+
+        //Gravetat.
+        star.body.gravity.y = 300;
+
+        //Donar un valor aleatòri a cada eestrella.
+        star.body.bounce.y = 0.7 + Math.random() * 0.2;
+    }
+
+    //Afegim la el text "Score: 0".
+    scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    //Controls.
+    cursors = game.input.keyboard.createCursorKeys();
+}
+
+function update() {
+    //Colisió entre el jugador i les estrelles.
+    game.physics.arcade.collide(player, platforms);
+    game.physics.arcade.collide(stars, platforms);
+
+    //Comprovar si el jugador es posiciona sobre alguna estrella.
+    game.physics.arcade.overlap(player, stars, collectStar, null, this);
+
+    //Reseteja la velocitat dels jugadors.
+    player.body.velocity.x = 0;
+
+    if (cursors.left.isDown)
+    {
+        //Moviment a l'esquerra.
+        player.body.velocity.x = -150;
+
+        player.animations.play('left');
+    }
+    else if (cursors.right.isDown)
+    {
+        //Moviment a la dreta.
+        player.body.velocity.x = 150;
+
+        player.animations.play('right');
+    }
+    else
+    {
+        //Jugador quiet.
+        player.animations.stop();
+
+        player.frame = 4;
+    }
+    
+    //Si el jugador està tocant a terra, el deixem saltar.
+    if (cursors.up.isDown && player.body.touching.down)
+    {
+        player.body.velocity.y = -350;
+    }
+}
+
+//Funció per agafar les estrelles i actualitzar la puntuació.
+function collectStar (player, star) {
+    //Traiem les estrelles.
+    star.kill();
+
+    //Afegim i actualitzem la puntuació.
+    score += 10;
+    scoreText.text = 'Score: ' + score;
+}
+
+</script>
+
+</body>
+</html>
