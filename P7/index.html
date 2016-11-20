@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font: 13px Helvetica, Arial; }
+        form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+        form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+        form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; margin: 5px;}
+        #messages { list-style-type: none; margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+<p id="messages"></p>
+<form action="">
+    <button>Livorno</button>
+    <button>St Pauli</button>
+</form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+    var socket = io();
+
+    var p1=0;
+    var p2=0;
+
+    socket.on('dibuixarmarcador', function(marcador){
+        p1 = marcador.Livorno;
+        p2 = marcador.StPauli;
+        actualitzamarcador(ctx);
+    });
+
+    function actualitzamarcador(ctx){
+        ctx.fillStyle = "#000000";
+        ctx.fillText(p1, canvas.width*1/4,100);
+        ctx.fillText(p2, canvas.width*3/4,100);
+
+        if (marcador.Livorno.click()){
+            p1++;
+            socket.emit('GolLivorno');
+        }
+        if(marcador.StPauli.click()){
+            p2++;
+            socket.emit('GolStPauli');
+        }
+    }
+
+</script>
+
+</body>
+</html>
