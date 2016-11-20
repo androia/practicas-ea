@@ -21,8 +21,10 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
-    var socket = io();
 
+    var socket = io();
+    var canvas = document.getElementById("mycanvas");
+    var ctx = canvas.getContext("2d");
     var p1=0;
     var p2=0;
 
@@ -48,6 +50,8 @@
     }
 
 </script>
+
+<canvas id="mycanvas" style="width:600px;height:400px;"></canvas>
 
 </body>
 </html>
