@@ -134,6 +134,7 @@ function igualOnClick(){
 }
 
 function eraseOnClick(){
+    //Esborrem el contingut de x, perquè al cridar a 'create()' no ens escrigui res i alhora, destruim el text.
     x = "";
     text.destroy();
     //text = game.add.text(50, 50, "", style);
@@ -144,10 +145,10 @@ function eraseOnClick(){
 function operadorOnClick(){
     //Guardem l'operador que hem seleccionat.
     operador = this.keyname.toString();
-    console.log("operador: " + operador);
+    //console.log("operador: " + operador);
 
     xGuardar = x;
-    console.log("xGuardar: " + xGuardar);
+    //console.log("xGuardar: " + xGuardar);
     x = "";
     text.destroy();
     create();
