@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        html, body { height: 100%; margin: 0; padding: 0; }
+        #map { height: 100%; }
+    </style>
+</head>
+
+<body>
+<div id="map"></div>
+    <script type="text/javascript">
+        var map;
+        var image = 'img/marcador.png';
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 15
+            });
+            var infoWindow = new google.maps.InfoWindow({map: map});
+
+            //Geolocalització.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    //infoWindow.setPosition(pos);
+                    //infoWindow.setContent('Tu posición es esta');
+                    map.setCenter(pos);
+                    //Insertem imatge per la posició de l'usuari
+                    var beachMarker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        icon: image
+                    });
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+
+            //5 punts fixes
+
+            //1. TRASKA TRUSKA
+            var content1 = 'Traska Truska';
+            var infowindow1 = new google.maps.InfoWindow({
+                content: content1,
+                maxWidth: 200
+            });
+            var marker1 = new google.maps.Marker({
+                position: {lat:41.4164308, lng: 2.0121822999999495},
+                map: map,
+            });
+            marker1.addListener('click', function() {
+                infowindow1.open(map, marker1);
+            });
+
+            //2. TAST
+            var content2 = 'Restaurant El Tast';
+            var infowindow2 = new google.maps.InfoWindow({
+                content: content2,
+                maxWidth: 200
+            });
+            var marker2 = new google.maps.Marker({
+                position: {lat:41.414428, lng: 2.0148971999999503},
+                map: map,
+            });
+            marker2.addListener('click', function() {
+                infowindow2.open(map, marker2);
+            });
+
+            //3. CARPE DIEM
+            var content3 = 'Carpe Diem';
+            var infowindow3 = new google.maps.InfoWindow({
+                content: content3,
+                maxWidth: 200
+            });
+            var marker3 = new google.maps.Marker({
+                position: {lat:41.4129861, lng: 2.016459599999962},
+                map: map,
+            });
+            marker3.addListener('click', function() {
+                infowindow3.open(map, marker3);
+            });
+
+            //4. DIANA
+            var content4 = 'Bar Diana';
+            var infowindow4 = new google.maps.InfoWindow({
+                content: content4,
+                maxWidth: 200
+            });
+            var marker4 = new google.maps.Marker({
+                position: {lat:41.4147081, lng: 2.0176854999999705},
+                map: map,
+            });
+            marker4.addListener('click', function() {
+                infowindow4.open(map, marker4);
+            });
+
+            //5. LA BODEGUETA VELLA
+            var content5 = 'La Bodegueta Vella';
+            var infowindow5 = new google.maps.InfoWindow({
+                content: content5,
+                maxWidth: 200
+            });
+            var marker5 = new google.maps.Marker({
+                position: {lat:41.4154934, lng: 2.0165534000000207},
+                map: map,
+            });
+            marker5.addListener('click', function() {
+                infowindow5.open(map, marker5);
+            });
+        }
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                    'Error: The Geolocation service failed.' :
+                    'Error: Your browser doesn\'t support geolocation.');
+        }
+    </script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrKF1Z8KcK7A9qvqorPWM3Kxf1GdMY-eM&callback=initMap">
+    </script>
+</body>
+</html>
