@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MÁS QUE DULCES</title>
+    <script language="javascript" src="jsjquery.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        function abrirChat() {
+            window.open('chat.html')
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <img id="cabecera" src="img/logochica.png" alt="Más que dulces" title="Más que dulces">
+    <img id="banner" src="img/banner1.png" alt="Más que dulces" title="Más que dulces">
+
+    <!-- MENÚ + REDES SOCIALES-->
+    <nav id="main-nav" class="row">
+        <ul>
+            <li> <a class = "menu" href="index.html"> INICIO </a> </li>
+            <li> <a class = "menu" href="galeria.html"> GALERIA </a> </li>
+            <li> <a class = "menu" href="creatupastel.html"> CREA TU PROPIO PASTEL </a> </li>
+            <li> <a class = "menu" href="contacta.html"> CONTACTA </a> </li>
+            <div class="redesSociales">
+                <a href="https://www.facebook.com/andrea.rubiopacho" target="_blank"><img src="img/facebook.png" width="30" height="30"/></a>&nbsp;&nbsp;
+                <a href="https://www.instagram.com/androiarubio/" target="_blank"><img src="img/instagram.png" width="30" height="30"/></a>&nbsp;&nbsp;
+            </div>
+        </ul>
+    </nav>
+    <!-- Fin MENÚ -->
+</header>
+
+<div class="bootstrap-contacta">
+    <div class="row">
+        <div class="col-lg-3"> </div>
+        <div class="col-lg-6">
+            <form name="Form1" id="Form1" action="hola">
+                <i>
+                    <p class="centrado">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            Nombre: <input type="text" NAME="nombre" id="nombre" autofocus required> <br> <br>
+                            Teléfono de contacto: <input type="tel" id="telf" required> <br> <br>
+                        </div>
+                        <div class="col-lg-6">
+                            Correo electrónico: <input type="email" placeholder="usuario@dominio.com" id="correo" required> <br> <br>
+                            Fecha de entrega: <input type="date" placeholder="2016-09-21" id="fechaEntrega" required> <br> <br>
+                        </div>
+                        ¿Qué tipo de pastel quieres?
+                        <select id="tipoPastel" name="tipoPastel" required>
+                            <option value="">- selecciona -</option>
+                            <option value="bizcocho">Bizcocho</option>
+                            <option value="pastas">Pastas</option>
+                            <option value="cupcake">Cupcakes</option>
+                            <option value="tarta">Tarta</option>
+                            <option value="pastelPersonalizado">Pastel personalizado</option>
+                            <option value="helado">Helado</option>
+                            <option value="pastelTradicional">Pastel para fiestas tradicionales</option>
+                        </select> <br> <br>
+                        Escríbeme una breve descripción de tu pastel para poder tener una idea más clara! <br> <textarea name="comment" rows="7" cols="100" id="descripcionPastel"></textarea> <br> <br>
+                        Si tienes una idea para tu pastel o quieres una oblea comestible en tu pastel, inserta tu imagen: <input type="file" name="adjunto"/> <br>
+                    </p>
+                </i>
+                <input type="submit" value="Enviar!" id="botonSubmit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<form>
+    <input type="button" value="¿Tienes alguna pregunta?" onclick="abrirChat()" class="chatB">
+</form>
+
+<div class="footer">
+    <!--<footer style="font-size:14px;">-->
+    Más que dulces - 647.91.17.91 - <a href="mailto:andreaarubio@gmail.com">andreaarubio@gmail.com</a> - <a href="https://www.facebook.com/andrea.rubiopacho" target="_blank"><img src="img/facebook.png" width="30" height="30"/></a>&nbsp;&nbsp;<a href="https://www.instagram.com/androiarubio/" target="_blank"><img src="img/instagram.png" width="30" height="30"/></a>&nbsp;&nbsp;
+    <br/><span class="copyright"><center>© Copyright 2017</center></span>
+    <!--</footer>-->
+</div>
+
+</body>
+
+</html>

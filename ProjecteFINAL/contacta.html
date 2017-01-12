@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MÁS QUE DULCES</title>
+    <script language="javascript" src="jsjquery.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        function abrirChat() {
+            window.open('chat.html')
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <img id="cabecera" src="img/logochica.png" alt="Más que dulces" title="Más que dulces">
+    <img id="banner" src="img/banner1.png" alt="Más que dulces" title="Más que dulces">
+
+    <!-- MENÚ + REDES SOCIALES-->
+    <nav id="main-nav" class="row">
+        <ul>
+            <li> <a class = "menu" href="index.html"> INICIO </a> </li>
+            <li> <a class = "menu" href="galeria.html"> GALERIA </a> </li>
+            <li> <a class = "menu" href="creatupastel.html"> CREA TU PROPIO PASTEL </a> </li>
+            <li> <a class = "menu" href="contacta.html"> CONTACTA </a> </li>
+            <div class="redesSociales">
+                <a href="https://www.facebook.com/andrea.rubiopacho" target="_blank"><img src="img/facebook.png" width="30" height="30"/></a>&nbsp;&nbsp;
+                <a href="https://www.instagram.com/androiarubio/" target="_blank"><img src="img/instagram.png" width="30" height="30"/></a>&nbsp;&nbsp;
+            </div>
+        </ul>
+    </nav>
+    <!-- Fin MENÚ -->
+</header>
+
+<div class="bootstrap-contacta">
+    <div class="row">
+        <div class="col-lg-3"> </div>
+        <div class="col-lg-3">
+            <form id="contact_form" action="email.php" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="name">Nombre:</label><br />
+                    <input id="name" class="input" name="name" type="text" value="" size="30" required/><br />
+                </div>
+                <div class="row">
+                    <label for="email">Correo electrónico:</label><br />
+                    <input id="email" class="input" name="email" type="text" value="" size="30" required /><br />
+                </div>
+                <div class="row">
+                    <label for="message">Mensaje:</label><br />
+                    <textarea id="message" class="input" name="message" rows="7" cols="30" required></textarea><br />
+                </div>
+                <input id="submit_button" type="submit" value="Enviar mensaje!" />
+            </form>
+        </div>
+        <div class="col-lg-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.4208363344605!2d2.017182914987827!3d41.40838247926225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49a8dd77cd0c1%3A0xe86a3c4d6a42510!2sCarrer+del+Canal+de+la+Infanta%2C+24%2C+08750+Molins+de+Rei%2C+Barcelona!5e0!3m2!1sca!2ses!4v1483983577204" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<form>
+    <input type="button" value="¿Tienes alguna pregunta?" onclick="abrirChat()" class="chatB">
+</form>
+
+<div class="footer">
+    <!--<footer style="font-size:14px;">-->
+        Más que dulces - 647.91.17.91 - <a href="mailto:andreaarubio@gmail.com">andreaarubio@gmail.com</a> - <a href="https://www.facebook.com/andrea.rubiopacho" target="_blank"><img src="img/facebook.png" width="30" height="30"/></a>&nbsp;&nbsp;<a href="https://www.instagram.com/androiarubio/" target="_blank"><img src="img/instagram.png" width="30" height="30"/></a>&nbsp;&nbsp;
+        <br/><span class="copyright"><center>© Copyright 2017</center></span>
+    <!--</footer>-->
+</div>
+
+</body>
+
+</html>
